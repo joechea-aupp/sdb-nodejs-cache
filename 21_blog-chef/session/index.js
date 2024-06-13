@@ -1,9 +1,11 @@
 import session from "express-session";
-import connectRedis from "connect-redis";
+// import connectRedis from "connect-redis";
 import memoryStore from "memorystore";
 import redisClient from "../cache/index.js";
+import RedisStore from "connect-redis";
 
-const RedisStore = connectRedis(session);
+// const RedisStore = connectRedis(session);
+
 const MemoryStore = memoryStore(session);
 
 export default (app) =>
